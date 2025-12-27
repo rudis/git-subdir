@@ -177,7 +177,7 @@ create_incoming_commits_for_linear_method() {
     export GIT_INDEX_FILE="$TEMP_INDEX_FILE"  # use a temporary index here to avoid
     git read-tree "$HEAD"
 
-    commit_msg_prefix="[$remote] "  # used by copy_commit
+    commit_msg_prefix="$prefix"  # used by copy_commit
 
     last_commit="$HEAD"
     echo "$incoming_commits" |
