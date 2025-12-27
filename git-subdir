@@ -459,7 +459,7 @@ process_subdir() {
                 run "Add the imported commits to the current branch" \
                     git update-ref -m "$import_message" HEAD "$new_commit" "$HEAD"
                 run "Update the working directory" \
-                    git read-tree --reset -u HEAD
+                    git read-tree -m -u HEAD
                 ;;
 
             merge)
